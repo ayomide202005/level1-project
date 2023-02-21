@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="add your todo" id="userInput">
+    <button onclick="add()">add</button>
+    <button onclick="deletetodo()">delete</button>
+    <button onclick="deleteall()">deleteall</button>
+    <button onclick="edit()">edit</button>
+    <script>
+        allTodo = []
+        function add(){
+            if(userInput.value==""){
+                alert("input your todo")
+            }else{
+                allTodo.push(userInput.value)
+                console.log(allTodo) 
+            }
+            userInput.value=""
+        }
+        function deleteall(){
+            var userResponse =confirm("are you sure?are you sure sure")
+            if(userResponse==true){
+                allTodo.splice(0)
+                console.log(allTodo)
+            }else{
+                console.log("nha why people no dey help people be this")
+            }
+        }
+    </script>
+</body>
+</html>
